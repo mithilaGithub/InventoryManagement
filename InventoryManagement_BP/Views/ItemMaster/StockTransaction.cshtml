@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "StockTransaction";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div ng-controller="StockCtrl" ng-init="init()">
+    <div>
+        <form ng-submit="AddStock()">
+            <div class="col-sm-12 col-md-12">
+                <div class="form-group  col-md-6">
+                    <label for="Item">Item:</label>
+                    <select class="dropdown" ng-model="Stock.ItemId" ng-options="item.Id as item.Name for item in ItemList track by item.Id">
+                        <option value="">---Select---</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+                <div class="form-group col-md-6">
+                    <label for="Quantity">Quantity:</label>
+                    <input type="text" class="form-control" id="Unit" ng-model="Stock.Quantity">
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+                <div class="form-group col-md-6">
+                    <label for="Type">Type:</label>
+                    <select class="dropdown" ng-model="Stock.Type">
+                          <option value="">---Select---</option>
+                        <option value="Added">Added</option>
+                        <option value="Consumpted">Consumpted</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group col-md-6">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="~/Content/Js/Stock.js"></script>

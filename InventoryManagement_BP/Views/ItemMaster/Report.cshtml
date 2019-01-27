@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Report";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div  ng-controller="ReportCtrl" ng-init="init()">
+    <div class="col-md-6">
+        <div id="chartContainer"></div>
+    </div>
+     <div class="col-md-6">
+    <div id="chartContainer1"></div>
+         </div>
+</div>
+<script src="~/Content/Js/canvasjs.min.js"></script>
+<script src="~/Content/Js/Report.js"></script>

@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "ItemMasterAdd";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div ng-controller="ItemMasterAddCtrl">
+    <div>
+    <form ng-submit="Add()">
+        <div class="col-sm-12 col-md-12" >
+            <div class="form-group col-sm-6 col-md-6" >
+                <label for="Name">Name:</label>
+                <input type="text" class="form-control" id="Name" ng-model="ItemMaster.Name">
+            </div>
+        </div>
+         <div class="col-sm-12 col-md-12" >
+              <div class="form-group col-sm-6 col-md-6">
+                <label for="Unit">Unit:</label>
+                <input type="text" class="form-control" id="Unit" ng-model="ItemMaster.Unit">
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-12">
+            <div class="form-group col-sm-6 col-md-6">
+                <label for="ReorderLevel">Reorder Level:</label>
+                <input type="text" class="form-control" id="Reorder Level" ng-model="ItemMaster.ReorderLevel">
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-12">
+            <div class="form-group col-sm-6 col-md-6">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+        </div>
+    </form>
+        </div>
+</div>
+<script src="~/Content/Js/ItemMasterAdd.js"></script>

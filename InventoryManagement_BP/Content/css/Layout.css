@@ -1,0 +1,46 @@
+﻿/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+}
+
+.logocolor {
+    color: #050606 !important;
+    background: #e2f8f6;
+}
+table th,table td{
+padding:25px;
+}
+table th {
+    background-color:#dbdbdb ;
+}
+@media (max-width: 600px) {
+}
+.dropdown {
+height: 26px;
+width: 100%;
+}
+.nav > li > a:focus, .nav > li > a:hover {
+   background-color:#e2f8f6 !important;
+   color:black !important;
+}
+.navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover {
+background-color:#e2f8f6 !important;
+ color:black !important;
+}
+.navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-nav > li > a{
+    color:white !important;
+}
+.navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
+    background-color:#e2f8f6 !important;
+ color:black !important;
+}
+.navbar-header {
+    border-right: 1px solid black;
+}

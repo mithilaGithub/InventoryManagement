@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "ItemMasterList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div ng-controller="ItemMasterCtrl" ng-init="init()">
+    <div class="text-center">
+    <div class="col-sm-12 col-md-6">
+        <table border="1px">
+            <tr>
+                <th></th>
+                <th></th>
+                <th>Name</th>
+                <th>Unit</th>
+                <th>Current Stock</th>
+                <th>Reorder Level</th>
+            </tr>
+            <tr ng-repeat=" ItemData in ItemMasterList">
+                <td><button ng-show="Operation=='Edit'" ng-click="Operation='update';"><span>Edit</span></button>
+                    <button  ng-show="Operation!='Edit'" ng-click="edit(ItemData)"><span>Update</span></button>
+                    <button  ng-show="Operation!='Edit'" ng-click="Operation='Edit';init()"><span>Cancel</span></button>
+                </td>
+                <td><button ng-click="delete(ItemData)">Delete</button>
+                </td>
+                <td><span ng-show="Operation=='Edit'" ng-bind="ItemData.Name"></span>
+                    <input ng-show="Operation!='Edit'" type="text" class="form-control" id="Name" ng-model="ItemData.Name">
+                </td>
+                <td><span ng-show="Operation=='Edit'" ng-bind="ItemData.Unit"></span>
+                    <input ng-show="Operation!='Edit'" type="text" class="form-control" id="Unit" ng-model="ItemData.Unit">
+                </td>
+                <td><span  ng-bind="ItemData.CurrentStock"></span>
+                   @* <input ng-show="Operation!='Edit'" type="text" class="form-control" id="CurrentStock" ng-model="ItemData.CurrentStock">*@
+                </td>
+                <td><span ng-show="Operation=='Edit'" ng-bind="ItemData.ReorderLevel"></span>
+                    <input ng-show="Operation!='Edit'" type="text" class="form-control" id="Reorder Level" ng-model="ItemData.ReorderLevel">
+                </td>
+            </tr>
+        </table>
+
+    </div>
+        </div>
+    <script src="~/Content/Js/ItemMaster.js"></script>
